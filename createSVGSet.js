@@ -38,6 +38,12 @@ filesKeys.forEach(key => {
         'utf8',
         () => {}
       );
+      fs.writeFile(
+        'icons.js',
+        `module.exports = ${JSON.stringify(iconObject, null, 2)}`,
+        'utf8',
+        () => {}
+      );
     }
   });
 });

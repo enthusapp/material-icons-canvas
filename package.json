@@ -1,0 +1,25 @@
+{
+  "name": "material-icons-canvas",
+  "version": "1.0.0",
+  "description": "Change color and resize material-icons on canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enthusapp/material-icons-canvas.git"
+  },
+  "keywords": [
+    "material-icons",
+    "canvas",
+    "resize",
+    "color_changing"
+  ],
+  "author": "handohee",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/enthusapp/material-icons-canvas/issues"
+  },
+  "homepage": "https://github.com/enthusapp/material-icons-canvas#readme"
+}
