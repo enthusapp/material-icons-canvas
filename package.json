@@ -1,6 +1,6 @@
 {
   "name": "material-icons-canvas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Change color and resize material-icons on canvas",
   "main": "index.js",
   "scripts": {

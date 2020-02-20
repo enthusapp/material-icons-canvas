@@ -1,4 +1,4 @@
-module.exports =(context, svgData, { x, y, width, height, color }) => {
+module.exports =(context, { svgData, x, y, width, height, color }) => {
   const svgInput = svgData
     .replace(/path/g, `path fill="${color}"`)
     .replace(/width="48"/g, `width="${width}"`)
