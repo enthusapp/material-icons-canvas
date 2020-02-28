@@ -28,7 +28,10 @@ let readIndex = 0;
 
 filesKeys.forEach(key => {
   fs.readFile(files[key], 'utf8', (err, data) => {
-    iconObject[key] = data;
+    iconObject[key] = data.substring(
+      data.indexOf('path d="') + 8,
+      data.length - 9
+    );
 
     readIndex += 1;
     if (readIndex === filesKeys.length) {
