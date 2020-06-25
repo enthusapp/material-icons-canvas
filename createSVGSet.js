@@ -33,7 +33,12 @@ filesKeys.forEach(key => {
     const fdata = data.substring(data.indexOf('path') + 4, data.length - 9);
     const f2data = fdata.substring(fdata.indexOf(' d="') + 4);
 
-    if (f2data[0] !== 'M' || f2data.indexOf('path') > 0) {
+    if (
+          f2data[0] !== 'M'
+          || f2data.indexOf('path') > 0
+          || f2data.indexOf('circle') > 0
+          || f2data.indexOf('fill') > 0
+        ) {
       failCount += 1;
       console.log(`tranfer fail: ${failCount}`);
       console.log(data);
