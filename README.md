@@ -2,8 +2,8 @@
 Draw material icons on canvas
 
 ### Install
-```
-yarn add git+https://github.com/enthusapp/material-icons-canvas
+```cmd
+C:\material-icons-canvas> yarn add git+https://github.com/enthusapp/material-icons-canvas
 ```
 
 ### Usage
@@ -20,10 +20,8 @@ drawMaterialIcons(canvas.getContext("2d"), icons.cloud, {
 ```
 
 ### Create icons.js
-
-copy https://github.com/google/material-design-icons, then
-
-```
-node createSVGSet.js
+```cmd
+C:\material-icons-canvas> git clone https://github.com/google/material-design-icons
+C:\material-icons-canvas> node createSVGSet.js
 ```
 
