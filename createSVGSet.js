@@ -38,6 +38,7 @@ filesKeys.forEach(key => {
           || f2data.indexOf('path') > 0
           || f2data.indexOf('circle') > 0
           || f2data.indexOf('fill') > 0
+          || key === 'fiber_smart_record'
         ) {
       failCount += 1;
       console.log(`tranfer fail: ${failCount}`);
