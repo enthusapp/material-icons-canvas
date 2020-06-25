@@ -28,10 +28,16 @@ let readIndex = 0;
 
 filesKeys.forEach(key => {
   fs.readFile(files[key], 'utf8', (err, data) => {
-    iconObject[key] = data.substring(
-      data.indexOf('path d="') + 8,
-      data.length - 9
-    );
+    const fdata = data.substring(data.indexOf('path') + 4, data.length - 9);
+    const f2data = fdata.substring(fdata.indexOf(' d="') + 4);
+
+    if (f2data[0] !== 'M') {
+      console.log('tranfer fail');
+      console.log(data);
+      console.log(`${key} === ${f2data}\r\n`);
+    } else {
+      iconObject[key] = f2data;
+    }
 
     readIndex += 1;
     if (readIndex === filesKeys.length) {
