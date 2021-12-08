@@ -1,14 +1,18 @@
 const hexToRgb = gr => {
-  const cs = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(gr);
+  const cs = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(gr);
   const r = parseInt(cs[1], 16);
   const g = parseInt(cs[2], 16);
   const b = parseInt(cs[3], 16);
-  return [r, g, b];
+  const o = parseInt(cs[4], 16);
+  return [r, g, b, o];
 };
 
 const addOpacity = (color, opacity = 1) => {
+  if (opacity === 1) return color;
+
   const ca = Array.isArray(color) ? color : hexToRgb(color);
-  return `RGB(${ca[0]}, ${ca[1]}, ${ca[2]}, ${opacity})`;
+
+  return `RGB(${ca[0]}, ${ca[1]}, ${ca[2]}, ${ca[3] * opacity})`;
 };
 
 module.exports = (context, { pathData, x, y, scale, color }, opacity) => {
