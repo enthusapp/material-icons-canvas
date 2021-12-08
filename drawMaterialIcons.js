@@ -3,7 +3,7 @@ const hexToRgb = gr => {
   const r = parseInt(cs[1], 16);
   const g = parseInt(cs[2], 16);
   const b = parseInt(cs[3], 16);
-  const o = parseInt(cs[4], 16);
+  const o = parseInt(cs[4], 16) / 0xff;
   return [r, g, b, o];
 };
 
